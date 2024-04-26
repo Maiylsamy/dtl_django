@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load mathfilters %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dtl</title>
+</head>
+<body>
+{% comment %}
+print numbers
+{% endcomment %}
+
+<h1>first number:{{x}}</h1>
+<h1>second number:{{y}}</h1>
+
+{% comment %}
+operation in numbers
+{% endcomment %}
+<h1>sum of the x and y : {{ x|add:y }}</h1>
+<h1>sub of the x and y : {{ x|sub:y }}</h1>
+<h1>multi of the x and y : {{ x|mul:y }}</h1>
+<h1>div of the x and y : {{ x|mod:y }}</h1>
+
+
+{% comment %}
+conditions
+{% endcomment %}
+
+{% if x > y %}
+    {{x}}
+{% else %}
+    {{y}}
+{% endif %}
+
+
+{% comment %}
+forloop
+{% endcomment %}
+{% for i in names reversed %}
+    {{ i }}
+<h1>{% endfor %}</h1>
+
+
+{% comment %}
+dictionary
+{% endcomment %}
+<h1>{{scores}}</h1>
+<h1>{{scores.0.maiyl|length}}</h1>
+<h1>{{ scores.1 }}</h1>
+</body>
+</html>
